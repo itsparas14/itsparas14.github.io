@@ -18,7 +18,7 @@
     --border: rgba(255,255,255,0.08);
     --border-hover: rgba(45,140,240,0.5);
     --text: #E6EDF3;
-    --text-muted: #8B949E; 
+    --text-muted: #8B949E;
     --text-dim: #484F58;
     --accent: #2D8CF0;
     --accent-glow: rgba(45,140,240,0.15);
@@ -330,17 +330,22 @@
   }
   .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .exp-bullets li {
-    display: flex; gap: 10px;
-    font-size: 14px; color: var(--text-muted); line-height: 1.65;
+    display: block;
+    padding-left: 18px;
+    position: relative;
+    font-size: 14px; color: var(--text-muted); line-height: 1.7;
   }
   .exp-bullets li::before {
     content: '▸';
     color: var(--accent);
-    flex-shrink: 0;
+    position: absolute;
+    left: 0; top: 1px;
     font-size: 11px;
-    margin-top: 3px;
   }
-  .exp-bullets li strong { color: var(--text); font-weight: 500; }
+  .exp-bullets li strong {
+    color: #c9d1d9;
+    font-weight: 500;
+  }
   .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
   .exp-tag {
     padding: 3px 9px;
@@ -549,7 +554,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="Paras_Kumar_Resume.pdf" download class="nav-cta">
+    <li><a href="Paras_Kumar_Resume_.pdf" download class="nav-cta">
       <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2.5 14A1.5 1.5 0 0 0 4 15.5h8A1.5 1.5 0 0 0 13.5 14V8a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5V8a.5.5 0 0 0-1 0zM8 1a.5.5 0 0 1 .5.5v7.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 9.293V1.5A.5.5 0 0 1 8 1"/></svg>
       Resume
     </a></li>
@@ -578,7 +583,7 @@
         View projects
         <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>
       </a>
-      <a href="Paras_Kumar_Resume.pdf" download class="btn-secondary">
+      <a href="Paras_Kumar_Resume_.pdf" download class="btn-secondary">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M2.5 14A1.5 1.5 0 0 0 4 15.5h8A1.5 1.5 0 0 0 13.5 14V8a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5V8a.5.5 0 0 0-1 0zM8 1a.5.5 0 0 1 .5.5v7.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 9.293V1.5A.5.5 0 0 1 8 1"/></svg>
         Download resume
       </a>
@@ -616,7 +621,7 @@
   <div class="about-grid reveal">
     <div class="about-text">
       <p>
-        I'm a <strong>BI Developer</strong> at Mars Cosmetics, where I own the full analytics stack from
+        I'm a <strong>BI Developer</strong> at Mars Cosmetics, where I own the full analytics stack — from
         raw SharePoint uploads and PostgreSQL pipelines to Power BI dashboards used daily by operations
         and leadership teams across 10+ sales channels.
       </p>
@@ -665,17 +670,18 @@
         <div class="exp-company">Mars Cosmetics · Delhi, India</div>
       </div>
       <div class="exp-meta">
-        <div class="exp-date">Sep 2025 – Present</div>
+        <div class="exp-date">Jun 2025 – Present</div>
+        <div class="exp-promo">↑ Promoted from intern</div>
       </div>
     </div>
     <ul class="exp-bullets">
-        <li>Built and maintained Power BI dashboards for  Sales, RTV, Fill Rate, MIS, and Freight across 10+ channels with MTD/YTD/YoY DAX measures reduced reporting turnaround by  40%, freeing ops team  4+ hours weekly.</li>
-      <li>Engineered a  PostgreSQL ETL pipeline for GRN, Fill Rate, and Freight using window functions (LAG, ROW_NUMBER) and JOINs; enhanced data accuracy by  25% and eliminated manual refresh cycles.</li>
-      <li>Automated daily pipelines via  Power Automate + SharePoint Online → Power BI Service scheduled refresh; removed manual uploads across 3 teams, cut data errors by  20%, provided same-day operational visibility.</li>
-      <li>Modeled weight-slab and zone-based rate logic in DAX to reconcile billed vs. contracted freight across  4 courier partners surfaced ₹20K+ in annual overcharges that fed directly into vendor renegotiations.</li>
-      <li>Built SKU × warehouse-stage × reason-code  drill-through fill rate model; identified 12 fast-movers below 60% fill rate due to pick-stage manpower gaps fix improved on-time SLA by  8%.</li>
-      <li>Developed  RTV Dashboard categorising returns by reason code across 10+ channels; insights integrated into vendor reviews, reducing repeat-issue return rates by  10% and reverse logistics costs by  ₹8K+/month.</li>
-      <li>Built multi-dimensional  courier performance analytics for 1,600+ monthly shipments across 12 partners identified high-TAT carriers, improving on-time delivery from  52% → 81% and
+      <li>Built and maintained Power BI dashboards for <strong>Sales, RTV, Fill Rate, MIS, and Freight</strong> across 10+ channels with MTD/YTD/YoY DAX measures — reduced reporting turnaround by <strong>40%</strong>, freeing ops team <strong>4+ hours weekly</strong>.</li>
+      <li>Engineered a <strong>PostgreSQL ETL pipeline</strong> for GRN, Fill Rate, and Freight using window functions (LAG, ROW_NUMBER) and JOINs; enhanced data accuracy by <strong>25%</strong> and eliminated manual refresh cycles.</li>
+      <li>Automated daily pipelines via <strong>Power Automate + SharePoint Online → Power BI Service</strong> scheduled refresh; removed manual uploads across 3 teams, cut data errors by <strong>20%</strong>, provided same-day operational visibility.</li>
+      <li>Modeled weight-slab and zone-based rate logic in DAX to reconcile billed vs. contracted freight across <strong>4 courier partners</strong> — surfaced <strong>₹20K+ in annual overcharges</strong> that fed directly into vendor renegotiations.</li>
+      <li>Built SKU × warehouse-stage × reason-code <strong>drill-through fill rate model</strong>; identified 12 fast-movers below 60% fill rate due to pick-stage manpower gaps — fix improved on-time SLA by <strong>8%</strong>.</li>
+      <li>Developed <strong>RTV Dashboard</strong> categorising returns by reason code across 10+ channels; insights integrated into vendor reviews, reducing repeat-issue return rates by <strong>10%</strong> and reverse logistics costs by <strong>₹8K+/month</strong>.</li>
+      <li>Built multi-dimensional <strong>courier performance analytics</strong> for 1,600+ monthly shipments across 12 partners — identified high-TAT carriers, improving on-time delivery from <strong>52% → 81%</strong> and cutting avg delivery TAT by <strong>1.4 days</strong>.</li>
     </ul>
     <div class="exp-tags">
       <span class="exp-tag">Power BI</span>
@@ -884,7 +890,7 @@
         <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
         GitHub
       </a>
-      <a href="Paras_Kumar_Resume.pdf" download class="contact-link">
+      <a href="Paras_Kumar_Resume_.pdf" download class="contact-link">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M2.5 14A1.5 1.5 0 0 0 4 15.5h8A1.5 1.5 0 0 0 13.5 14V8a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5V8a.5.5 0 0 0-1 0zM8 1a.5.5 0 0 1 .5.5v7.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 9.293V1.5A.5.5 0 0 1 8 1"/></svg>
         Download resume
       </a>
